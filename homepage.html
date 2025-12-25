@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the background image */
+        body {
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+        }
+        .background-image {
+            /* Using a placeholder image for demonstration.
+               Replace 'https://placehold.co/1920x1080/000000/FFFFFF/png?text=Your+Background+Image'
+               with your actual image URL.
+               Adding onerror to handle image loading failures. */
+            background-image: url('https://placehold.co/1920x1080/000000/FFFFFF/png?text=Your+Background+Image');
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
+        /* Optional: Add an overlay for better text readability */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        }
+    </style>
+</head>
+<body class="h-screen w-full flex items-center justify-center background-image">
+    <!-- Overlay for better text readability -->
+    <div class="overlay absolute inset-0 w-full h-full"></div>
+
+    <!-- Login Form Container -->
+    <div class="relative z-10 p-8 md:p-10 bg-white bg-opacity-90 rounded-2xl shadow-lg w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 max-w-md">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Login</h2>
+
+        <form>
+            <!-- Username/Email Input -->
+            <div class="mb-5">
+                <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email or Username</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="your@example.com"
+                    required
+                >
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-6">
+                <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    placeholder="********"
+                    required
+                >
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between mb-6 text-sm">
+                <label class="flex items-center text-gray-700">
+                    <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600 rounded-md mr-2">
+                    Remember me
+                </label>
+                <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <button
+                type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl focus:outline-none focus:shadow-outline transition-colors duration-200"
+            >
+                Log In
+            </button>
+        </form>
+
+        <!-- Sign Up Link -->
+        <div class="text-center mt-6 text-gray-700 text-sm">
+            Don't have an account?
+            <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 font-semibold">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

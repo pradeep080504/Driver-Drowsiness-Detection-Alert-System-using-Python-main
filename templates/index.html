@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Driver Drowsiness Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #video-container {
+            display: inline-block;
+            border: 2px solid #333;
+            background-color: #000;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #alerts {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Driver Drowsiness Detection</h1>
+    <div id="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Video Stream" />
+    </div>
+    <div id="alerts">
+        <!-- Alerts are shown on video overlay, so no separate alerts here -->
+    </div>
+</body>
+</html>
